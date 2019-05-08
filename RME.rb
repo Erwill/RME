@@ -8015,6 +8015,8 @@ class Sprite_Character
   def set_character_bitmap
     rm_extender_set_character_bitmap
     if character.changing_graphics || (character.ox.nil? && character.oy.nil?)
+      character.ox = @cw / 2
+      character.oy = @ch
       character.ox = self.ox
       character.oy = self.oy
     else
